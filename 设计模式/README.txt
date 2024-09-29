@@ -14,6 +14,9 @@
 原型模式（Prototype Pattern）：
 
 通过复制现有对象来创建新对象，而不是通过实例化类。
+
+
+
 #结构型模式
 适配器模式（Adapter Pattern）：
 
@@ -36,6 +39,9 @@
 代理模式（Proxy Pattern）：
 
 为其他对象提供一种代理以控制对这个对象的访问。
+
+
+
 #行为型模式
 责任链模式（Chain of Responsibility Pattern）：
 
