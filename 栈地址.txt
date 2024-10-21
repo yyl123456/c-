@@ -98,7 +98,19 @@ a:0x7ffcb8e4a5d7 b:0x7ffcb8e4a5d6 c:0x7ffcb8e4a5d0 :0x7ffcb8e4a5d0:0x7ffcb8e4a5d
 
 
 
-
+越界访问
+int main()
+{
+   /*  Write C code in this online editor and run it. */
+        char a;
+        char b;
+		char e=7;
+		int c;
+        char *c1 = (char *)&c;
+        printf("a:%p b:%p e:%p c:%p :%p:%p:%p:%p:%p  %d  %d\n",&a ,&b ,&e ,&c ,&c1[0],&c1[1],&c1[2],&c1[3],&c1[5],c1[5],e);
+        return 0;
+}
+a:0x7fff0b0278a7 b:0x7fff0b0278a6 e:0x7fff0b0278a5 c:0x7fff0b0278a0 :0x7fff0b0278a0:0x7fff0b0278a1:0x7fff0b0278a2:0x7fff0b0278a3:0x7fff0b0278a5  7  7
 
 
 
