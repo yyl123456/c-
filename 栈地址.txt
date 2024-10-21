@@ -61,3 +61,46 @@ int main()
  
 
 PS: 堆的生长方向是从下往上的，这儿就不演示了，可以用指针接收malloc申请的内存测试下。
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+   /*  Write C code in this online editor and run it. */
+        char a;
+        char b;
+		      int c;
+        char *c1 = (char *)&c;
+        printf("a:%p b:%p c:%p :%p :%p :%p :%p\n",&a ,&b ,&c ,&c1[0],&c1[1],&c1[2],&c1[3]);
+        return 0;
+}
+a:0x7fffe3e70847 b:0x7fffe3e70846 c:0x7fffe3e70840 :0x7fffe3e70840 :0x7fffe3e70841 :0x7fffe3e70842 :0x7fffe3e70843
+
+
+虽然加了个e，但是结构没变，对齐了4字节
+#include <stdio.h>
+int main()
+{
+   /*  Write C code in this online editor and run it. */
+        char a;
+        char b;
+		      char e;
+		      int c;
+        char *c1 = (char *)&c;
+        printf("a:%p b:%p c:%p :%p:%p:%p:%p\n",&a ,&b ,&c ,&c1[0],&c1[1],&c1[2],&c1[3]);
+        return 0;
+}
+a:0x7ffcb8e4a5d7 b:0x7ffcb8e4a5d6 c:0x7ffcb8e4a5d0 :0x7ffcb8e4a5d0:0x7ffcb8e4a5d1:0x7ffcb8e4a5d2:0x7ffcb8e4a5d3
+
+
+
+
+
+
+
+
+
